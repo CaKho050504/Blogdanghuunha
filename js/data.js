@@ -86,33 +86,33 @@ const portfolioData = {
             category: "Frontend Development",
             icon: "fa-laptop-code",
             items: [
-                { name: "HTML/CSS", level: 95 },
-                { name: "JavaScript", level: 90 },
-                { name: "React", level: 85 },
-                { name: "Vue.js", level: 80 },
-                { name: "TypeScript", level: 75 }
+                { name: "HTML/CSS", level: 65 },
+                { name: "JavaScript", level: 60 },
+                { name: "React", level: 55 },
+                { name: "Vue.js", level: 50 },
+                { name: "TypeScript", level: 50 }
             ]
         },
         {
             category: "Backend Development",
             icon: "fa-server",
             items: [
-                { name: "Node.js", level: 85 },
-                { name: "Express.js", level: 80 },
-                { name: "MongoDB", level: 75 },
-                { name: "MySQL", level: 80 },
-                { name: "REST API", level: 90 }
+                { name: "Node.js", level: 55 },
+                { name: "Express.js", level: 50 },
+                { name: "MongoDB", level: 50 },
+                { name: "MySQL", level: 55 },
+                { name: "REST API", level: 60 }
             ]
         },
         {
             category: "Tools & Others",
             icon: "fa-tools",
             items: [
-                { name: "Git", level: 90 },
-                { name: "Docker", level: 70 },
-                { name: "Figma", level: 75 },
-                { name: "Photoshop", level: 80 },
-                { name: "Agile/Scrum", level: 85 }
+                { name: "Git", level: 60 },
+                { name: "Docker", level: 50 },
+                { name: "Figma", level: 55 },
+                { name: "Photoshop", level: 55 },
+                { name: "Agile/Scrum", level: 55 }
             ]
         }
     ],
@@ -141,26 +141,11 @@ const portfolioData = {
             degree: "Cử nhân",
             major: "Công Nghệ Thông Tin - Kỹ Thuật Phần Mềm",
             duration: "2019 - 2023",
-            gpa: "3.8/4.0",
+            gpa: "3.0/4.0",
             achievements: [
-                {
-                    text: "Sinh viên xuất sắc năm 2021-2022",
-                    image: "images/achievements/excellent-student-2021-2022.jpg" // Thay bằng đường dẫn hình ảnh minh chứng
-                },
-                {
-                    text: "Giải Nhất cuộc thi Hackathon 2022",
-                    image: "images/achievements/hackathon-2022-first-prize.jpg" // Thay bằng đường dẫn hình ảnh minh chứng
-                },
-                {
-                    text: "Top 10% sinh viên khoa CNTT",
-                    image: "images/achievements/top-10-percent.jpg" // Thay bằng đường dẫn hình ảnh minh chứng
-                },
-                {
-                    text: "Đồ án tốt nghiệp điểm A",
-                    image: "images/achievements/graduation-project-grade-a.jpg" // Thay bằng đường dẫn hình ảnh minh chứng
-                }
-                // Có thể thêm achievements không có minh chứng bằng cách dùng string:
-                // "Thành tích khác không có minh chứng"
+                "Tham gia cuộc thi HUTECH GOT TALEN",
+                "Ban cán sự xuất sắc",
+                "Nhiều lần đạt giải trong các hội thao của trường"
             ],
             description: "Chuyên ngành Kỹ thuật phần mềm với focus vào Web Development, Mobile App và AI/ML.",
             // ============================================

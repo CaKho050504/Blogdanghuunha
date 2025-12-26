@@ -33,7 +33,7 @@ function renderHero() {
             <div class="hero-text-side">
                 <p class="hero-greeting">👋 Xin chào, Tôi là</p>
                 <h1 class="hero-title">${name}</h1>
-                <h2 class="hero-subtitle">${rotatingTexts[0]}</h2>
+                <h2 class="hero-subtitle"><span class="typing-text"></span><span class="typing-cursor">|</span></h2>
                 <p class="hero-description">${description}</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-outline">Xem Dự Án</a>
@@ -50,7 +50,47 @@ function renderHero() {
         </div>
     `;
 
-    // Typing effect đã tắt - chỉ hiển thị text tĩnh
+    // Typing effect với 5 nội dung, quay lại như banner
+    if (rotatingTexts.length > 0) {
+        const typingTextElement = hero.querySelector('.typing-text');
+        const typingCursor = hero.querySelector('.typing-cursor');
+        let currentIndex = 0;
+        let currentText = '';
+        let isDeleting = false;
+        let typingSpeed = 100; // Tốc độ đánh chữ (ms)
+        
+        const typeText = () => {
+            const fullText = rotatingTexts[currentIndex];
+            
+            if (isDeleting) {
+                // Xóa chữ từng ký tự
+                currentText = fullText.substring(0, currentText.length - 1);
+                typingSpeed = 50; // Xóa nhanh hơn
+            } else {
+                // Đánh chữ từng ký tự
+                currentText = fullText.substring(0, currentText.length + 1);
+                typingSpeed = 100; // Tốc độ đánh bình thường
+            }
+            
+            typingTextElement.textContent = currentText;
+            
+            if (!isDeleting && currentText === fullText) {
+                // Đã đánh xong, dừng 2 giây rồi xóa
+                typingSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && currentText === '') {
+                // Đã xóa xong, chuyển sang text tiếp theo
+                isDeleting = false;
+                currentIndex = (currentIndex + 1) % rotatingTexts.length;
+                typingSpeed = 500; // Dừng ngắn trước khi đánh text mới
+            }
+            
+            setTimeout(typeText, typingSpeed);
+        };
+        
+        // Bắt đầu hiệu ứng typing
+        typeText();
+    }
 }
 
 // Generate Hero Pixel Rain

@@ -89,9 +89,9 @@
 
 .skill-level {
     font-size: 0.95rem;
-    color: #00ffff;
+    color: #000000;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    text-shadow: none;
 }
 
 .skill-bar {
